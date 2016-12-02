@@ -6,8 +6,7 @@
     "validateUpsert": true
   },
   "scope": {
-    "order": "fullName",
-    "include": [ "reservations" ]
+    "order": "fullName"
   },
   "properties": {
     "fullName": {
