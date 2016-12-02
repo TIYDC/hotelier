@@ -16,6 +16,7 @@
   "undef": true,
   "unused": false,
   "trailing": true,
+  "validthis": true,
   "sub": true,
   "maxlen": 80
 }
