@@ -1,6 +1,11 @@
 {
+  "temp": {
+    "name": "temp",
+    "connector": "memory"
+  },
   "db": {
     "name": "db",
-    "connector": "memory"
+    "connector": "memory",
+    "file": "data.json"
   }
 }
