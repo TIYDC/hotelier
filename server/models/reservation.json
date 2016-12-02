@@ -1,0 +1,67 @@
+{
+  "name": "Reservation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "checkinDate": {
+      "type": "date",
+      "required": true
+    },
+    "createDate": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "numberOfNights": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    }
+  },
+  "validations": [],
+  "relations": {
+    "guest": {
+      "type": "belongsTo",
+      "model": "Guest"
+    },
+    "room": {
+      "type": "belongsTo",
+      "model": "Room"
+    },
+    "staff": {
+      "type": "belongsTo",
+      "model": "Staff"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "findById"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

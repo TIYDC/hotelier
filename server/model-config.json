@@ -32,5 +32,21 @@
   "Role": {
     "dataSource": "temp",
     "public": false
+  },
+  "Staff": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Guest": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Room": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Reservation": {
+    "dataSource": "db",
+    "public": true
   }
 }
