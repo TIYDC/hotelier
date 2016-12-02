@@ -5,6 +5,10 @@
   "options": {
     "validateUpsert": true
   },
+  "scope": {
+    "order": "checkinDate DESC",
+    "include": [ "room", "guest", "staff" ]
+  },
   "properties": {
     "checkinDate": {
       "type": "date",

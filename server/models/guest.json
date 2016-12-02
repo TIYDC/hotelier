@@ -5,6 +5,10 @@
   "options": {
     "validateUpsert": true
   },
+  "scope": {
+    "order": "fullName",
+    "include": [ "reservations" ]
+  },
   "properties": {
     "fullName": {
       "type": "string",

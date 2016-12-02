@@ -5,6 +5,10 @@
   "options": {
     "validateUpsert": true
   },
+  "scope": {
+    "order": "rate DESC",
+    "include": [ "reservations" ]
+  },
   "properties": {
     "number": {
       "type": "number",
