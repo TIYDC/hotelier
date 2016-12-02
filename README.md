@@ -1,2 +1,3 @@
-# hotelier
-A basic hotel management system
+# Hotelier
+
+A basic hotel management system.
