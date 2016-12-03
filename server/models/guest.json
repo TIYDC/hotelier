@@ -47,10 +47,11 @@
       "permission": "ALLOW"
     },
     {
-      "accessType": "READ",
+      "accessType": "EXECUTE",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW"
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "findById"
     }
   ],
   "methods": {}

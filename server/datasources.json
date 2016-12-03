@@ -4,8 +4,10 @@
     "connector": "memory"
   },
   "db": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "hotelier",
     "name": "db",
-    "connector": "memory",
-    "file": "data.json"
+    "connector": "mongodb"
   }
 }

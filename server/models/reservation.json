@@ -7,10 +7,22 @@
   },
   "scope": {
     "order": "checkinDate DESC",
-    "include": [ "room", "guest", "staff" ]
+    "include": [
+      "room",
+      "guest",
+      "staff"
+    ]
   },
   "properties": {
+    "numberOfGuests": {
+      "type": "number",
+      "required": true
+    },
     "checkinDate": {
+      "type": "date",
+      "required": true
+    },
+    "checkoutDate": {
       "type": "date",
       "required": true
     },
@@ -18,11 +30,6 @@
       "type": "date",
       "required": true,
       "defaultFn": "now"
-    },
-    "numberOfNights": {
-      "type": "number",
-      "required": true,
-      "default": 1
     }
   },
   "validations": [],
@@ -57,14 +64,21 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     },
     {
       "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "findById"
     }
   ],
   "methods": {}
